@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eclipse Energy – Energy Checkup</title>
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./checkup/checkup.css">
+  <link rel="stylesheet" href="./blueprint/blueprint.css">
+  <link rel="stylesheet" href="./mission/mission.css">
+  <link rel="stylesheet" href="./stories/stories.css">
+  <link rel="stylesheet" href="./stopping/stopping.css">
+  <link rel="stylesheet" href="./anims.css">
+  <script src="./base.js" defer></script>
+  <script src="./checkup/checkup.js" defer></script>
+  <script src="./blueprint/blueprint.js" defer></script>
+  <script src="./mission/mission.js" defer></script>
+  <script src="./stories/stories.js" defer></script>
+  <script src="./stopping/stopping.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">🌑 Eclipse</div>
+    <nav>
+      <ul class="chevron-nav">
+        <li><a href="../checkup/checkup.html">Checkup</a></li>
+        <li class="orbit"></li>
+        <li class="orbit"></li>
+        <li><a href="../blueprint/blueprint.html" class="active">Blueprint</a></li>
+        <li class="orbit"></li>
+        <li><a href="../mission/mission.html">Mission</a></li>
+        <li class="orbit"></li>
+        <li><a href="../stories/stories.html">Stories</a></li>
+        <li class="orbit"></li>
+        <li><a href="../stopping/stopping.html">What’s Stopping You?</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="checkup fade-in">
+    <h1 class="title">Your Eclipse Energy Checkup</h1>
+    <p class="subtitle">What’s your biggest energy headache right now?</p>
+    <div class="choices">
+      <button class="choice" data-next="blueprint.html">💸 High Bills</button>
+      <button class="choice" data-next="blueprint.html">⚡ Unreliable Grid</button>
+      <button class="choice" data-next="blueprint.html">🔋 Need Backup Power</button>
+      <button class="choice" data-next="blueprint.html">🚀 Future-proofing</button>
+      <button class="choice" data-next="quiz">🤔 I Don’t Know</button>
+    </div>
+  </section>
+
+  <section class="blueprint container">
+    <h1 class="title">Build Your Solar Blueprint</h1>
+
+    <div class="blueprint-grid">
+      <!-- LEFT (Steps) -->
+      <div id="blueprint-left" class="stack">
+        
+        <!-- Step 1: Energy Needs -->
+        <div class="step active" data-step="1">
+          <h2>🔌 What Do You Power?</h2>
+
+          <div class="appliances-grid">
+            <div class="appliance" data-watts="80">
+              <img src="images/icon-laptop.png" alt="Laptop">
+              <img src="images/icon-console.png" alt="Console">
+              <p>Laptop / Console (80W)</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+
+            <div class="appliance" data-watts="200">
+              <img src="images/icon-fridge.png" alt="Fridge">
+              <img src="images/icon-freezer.png" alt="Freezer">
+              <p>Fridge / Freezer (200W)</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+
+            <div class="appliance" data-watts="300">
+              <img src="images/icon-desktop.png" alt="Desktop">
+              <img src="images/icon-tv.png" alt="TV">
+              <p>Desktop / TV (300W)</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+
+            <div class="appliance" data-watts="800">
+              <img src="images/icon-wash.png" alt="Washing Machine">
+              <img src="images/icon-micro.png" alt="Microwave">
+              <p>Washing Machine / Microwave (800W)</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+
+            <div class="appliance" data-watts="1000">
+              <img src="images/icon-space-heater.png" alt="Space Heater">
+              <img src="images/icon-ac.png" alt="Air Conditioner">
+              <p>Space Heater / AC (1000W)</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+
+            <div class="appliance" data-watts="1500">
+              <img src="images/icon-vacuum.png" alt="Vacuum Cleaner">
+              <img src="images/icon-hair-dryer.png" alt="Hair Dryer">
+              <p>Vacuum Cleaner / Hair Dryer (1500W)</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+
+            <div class="appliance" data-watts="1800">
+              <img src="images/icon-dryer.png" alt="Dryer">
+              <img src="images/icon-dishwasher.png" alt="Dishwasher">
+              <p>Dryer / Dishwasher (1800W)</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+
+            <div class="appliance" data-watts="3000">
+              <img src="images/icon-oven.png" alt="Oven">
+              <img src="images/icon-water-heater.png" alt="Water Heater">
+              <p>Oven / Water Heater(3000W)</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+          </div>
+
+          <p>Total Consumption: <span id="needs-watts">0</span> W</p>
+
+        </div>
+
+        <!-- Step 2: ROI (Products) -->
+        <div class="step" data-step="2">
+          <h2>💸 Does it Pay Off?</h2>
+          <div class="products-row">
+            <!-- Panels -->
+            <div class="product" data-name="Panel" data-price="250" data-watts="350">
+              <img src="./images/icon-panel.png" alt="Panel">
+              <p>Solar Panel</p>
+              <p>$250</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+            <!-- Inverter -->
+            <div class="product" data-name="Inverter" data-price="800">
+              <img src="./images/icon-inverter.png" alt="Inverter">
+              <p>Inverter<br>(FusionDrive)</p>
+              <p>$800</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+            <!-- Battery -->
+            <div class="product" data-name="Battery" data-price="1200" data-kwh="5">
+              <img src="./images/icon-battery.png" alt="Battery">
+              <p>Battery (5kWh)</p>
+              <p>$1200</p>
+              <div class="controls">
+                <button class="minus">-</button>
+                <span class="count">0</span>
+                <button class="plus">+</button>
+              </div>
+            </div>
+          </div>
+          <p>Total Investment: $<span id="total-cost">0</span></p>
+          <p>Grid Energy Cost: $<span id="grid-cost">0</span> / year</p>
+          <p>Solar Savings: $<span id="solar-savings">0</span> / year</p>
+          <p>ROI: <span id="roi">--</span> years</p>
+        </div>
+
+        <!-- Step 3: Reliability + Blackout -->
+        <div class="step" data-step="3">
+          <h2>⚡ Reliability & Blackout Coverage</h2>
+          
+          <p>
+            Power outages don’t have to mean sitting in the dark.  
+            Your system can keep essential appliances running when the grid goes down.
+          </p>
+
+          <div class="reliability-options">
+            <div class="option">
+              <h3>🔋 Battery Backup</h3>
+              <p>
+                Stores energy for night and outages.  
+                Covers <span id="backup-hours">--</span> hours of power.
+              </p>
+              <button class="add-battery">+ Add More Batteries</button>
+            </div>
+
+            <div class="option">
+              <h3>🔌 Critical Loads Panel</h3>
+              <p>
+                Choose what stays on during a blackout  
+                (e.g. fridge, lights, medical equipment).
+              </p>
+              <select id="critical-loads">
+                <option>Fridge + Lights</option>
+                <option>Fridge + Lights + Router</option>
+                <option>Full Home (requires more batteries)</option>
+              </select>
+            </div>
+
+            <div class="option">
+              <h3>☀️ Daytime Protection</h3>
+              <p>
+                As long as the sun is shining, your panels  
+                keep producing power even when the grid fails.
+              </p>
+            </div>
+          </div>
+
+          <p class="reassure">
+            ✅ With the right setup, you’ll never worry about food spoiling,  
+            missing work calls, or living in the dark again.
+          </p>
+        </div>
+
+        <!-- Step 4: Future-Proofing -->
+        <div class="step" data-step="4">
+          <h2>🚀 Future-Proofing</h2>
+          <label><input type="checkbox" data-points="30"> I plan to buy an electric car</label>
+          <label><input type="checkbox" data-points="20"> I want a smart home system</label>
+          <label><input type="checkbox" data-points="20"> I may add more panels in the future</label>
+          <p>Your setup is <span id="future-ready">--</span>% future-proof.</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+          <button class="prev">⬆ Back</button>
+          <button class="next">⬇ Next</button>
+        </div>
+      </div>
+
+      <!-- RIGHT (Battery Tank) -->
+      <div id="blueprint-right" class="flex-center">
+        <h2>⚡ Charging Your Future<span class="dots"></span></h2>
+        <div id="battery cont">
+          <div class="battery-shell">
+            <div class="battery-section"></div>
+            <div class="battery-section"></div>
+            <div class="battery-section"></div>
+            <div class="battery-section"></div>
+            <div class="battery-section"></div>
+            <div class="liquid"></div>
+          </div>
+
+          <div class="score">0%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission">
+    <h1>Mission Control</h1>
+    <div class="modules">
+      <div class="module">🚀 Install & Setup</div>
+      <div class="module">🛰 Monitoring</div>
+      <div class="module">🛠 Maintenance</div>
+      <div class="module">💰 Financing</div>
+    </div>
+  </section>
+
+  <section class="stories">
+    <h1>Real Eclipse Transformations</h1>
+    <div class="case">
+      <p>Before → High bills</p>
+      <p>After → 70% cost reduction in 2 years</p>
+    </div>
+    <div class="case">
+      <p>Before → Grid outages</p>
+      <p>After → Full backup with Eclipse Battery</p>
+    </div>
+  </section>
+
+  <section class="stopping">
+    <h1>What’s Stopping You from Going Solar?</h1>
+    <div class="options">
+      <button class="objection">💰 Too Expensive</button>
+      <button class="objection">🤔 Not Sure It Works</button>
+      <button class="objection">📚 Need More Info</button>
+      <button class="objection">⏳ Timing</button>
+      <button class="objection">❓ Other</button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>🌑 Eclipse Energy © 2025</p>
+  </footer>
+</body>
+</html>
