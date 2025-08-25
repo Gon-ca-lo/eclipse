@@ -1,7 +1,0 @@
-/* Stories cases */
-.case {
-  padding: 1.25rem;
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--glass-border);
-}
