@@ -1,0 +1,263 @@
+.blueprint .title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.blueprint-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ---------- LEFT COL ---------- */
+#blueprint-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.step { display: none; }
+.step.active { display: block; }
+
+/* ---------- STEP1 ---------- */
+.appliances-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.appliance {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.appliance img {
+  width: 40px;
+  height: auto;
+  margin: 0.25rem;
+}
+.appliance p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.controls .count {
+  font-size: 1rem;
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ---------- BTNS (STEP1 & STEP2) ---------- */
+.controls button {
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.controls button {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.controls .plus {
+  background: #28a745; /* green */
+}
+.controls .plus:hover {
+  background: #34d058; /* brighter green */
+}
+.controls .minus {
+  background: #dc3545; /* red */
+}
+.controls .minus:hover {
+  background: #ff4d5a; /* brighter red */
+}
+.controls .plus:active, .controls .minus:active {
+  transform: scale(1.15); /* slight pop */
+}
+
+/* ---------- STEP2 ---------- */
+.products-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10%;
+}
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 6px 12px; /* spacing (row col) */
+  align-items: center;
+  height: 250px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.product img {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  height: 120px;
+  width: 120px;
+  justify-self: center;
+}
+.product p:nth-of-type(1) {
+  grid-row: 1;
+  grid-column: 2;
+  font-weight: bold;
+  font-size: 20px;
+  align-self: end;
+}
+.product p:nth-of-type(2) {
+  grid-row: 2;
+  grid-column: 2;
+  color: #666;
+  font-size: 15px;
+  align-self: start;
+}
+.product .controls {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  transform: scale(1.1);
+}
+@keyframes popGlow {
+  0%   { box-shadow: 0 0 6px 2px gold; }
+  50%  { box-shadow: 0 0 20px 6px gold; }
+  100% { box-shadow: 0 0 6px 2px gold; }
+}
+.product.highlight {
+  border: 3px solid gold !important;
+  animation: popGlow 1.5s infinite ease-in-out;
+  border-radius: 12px;
+}
+
+/* ---------- STEP3 ---------- */
+.reliability-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.reliability-options .option {
+  border: 2px solid white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.reliability-options h3 {
+  margin-top: 0;
+}
+.reliability-options button {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.reliability-options button:hover {
+  background: #005ecc;
+}
+#critical-loads option {
+  background-color: black;
+}
+
+/* ---------- NAV ---------- */
+.blueprint .nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.blueprint .nav button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--violet);
+  color: white;
+  cursor: pointer;
+}
+.blueprint .nav button:hover { background: var(--cyan); }
+
+/* ---------- RIGHT COL ---------- */
+#blueprint-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.battery h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.dots::after {
+  content: "";
+  animation: dots 1.5s steps(3, end) infinite;
+}
+@keyframes dots {
+  0% { content: ""; }
+  33% { content: "."; }
+  66% { content: ".."; }
+  100% { content: "..."; }
+}
+#battery-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.battery-shell {
+  position: relative;
+  width: 180px;
+  height: 320px;
+  border: 4px solid var(--gold);
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column-reverse;
+}
+.battery-section {
+  flex: 1;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+.liquid {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(180deg, #ffec85, #ffb300);
+  /*ffe066 ff9900*/
+  animation: wave 6s infinite linear;
+}
+@keyframes wave {
+  0% { background-position: 0 0; }
+  100% { background-position: 200px 0; }
+}
+.score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--gold);
+}

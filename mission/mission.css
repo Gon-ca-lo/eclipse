@@ -1,0 +1,15 @@
+.module {
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid var(--glass-border);
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: transform var(--dur) ease, box-shadow var(--dur) ease, border-color var(--dur) ease;
+}
+.module:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,255,240,0.45);
+  box-shadow: var(--glow-cyan);
+}
